@@ -1,0 +1,222 @@
+======== Start ========
+Report Time: 2015-07-01 21:54:01 +0800
+======== VulsCount ========
+{:critical=>14, :high=>146, :medium=>1440, :low=>1143, :info=>100402}
+host_count: 18304
+======== Vulnerabilities ========
+Critical: Oracle Database Unsupported ["172.254.254.36", ["172.254.254.34"]]
+Critical: Apache Traffic Server Unsupported ["172.68.0.120", ["172.101.31.145"]]
+Critical: Apache Traffic Server < 4.2.1.1 / 5.0.1 Synthetic Health Check Vulnerability ["172.68.0.120"]
+Critical: MS15-034: Vulnerability in HTTP.sys Could Allow Remote Code Execution (3042553) (uncredentialed check) ["172.99.168.125"]
+Critical: MS14-066: Vulnerability in Schannel Could Allow Remote Code Execution (2992611) (uncredentialed check) ["172.99.168.71", ["172.99.168.70"], ["172.99.168.69"], ["172.99.168.68"], ["172.99.168.7"], ["172.249.49.5"], ["172.249.17.10"]]
+Critical: Dell iDRAC Products IPMI Arbitrary Command Injection Vulnerability ["172.99.32.176"]
+High: Oracle TNS Listener Remote Poisoning ["172.254.254.36", ["172.254.254.34"]]
+High: OpenSSL 'ChangeCipherSpec' MiTM Vulnerability ["172.254.253.145", ["172.64.1.135"], ["172.64.1.64"], ["172.101.172.178"], ["172.21.100.62"], ["172.201.190.15"], ["172.201.11.32"]]
+High: Elasticsearch 'source' Parameter RCE ["172.64.1.49"]
+High: PHP 5.5.x < 5.5.26 Multiple Vulnerabilities ["172.64.0.113", ["172.105.200.106"], ["172.105.15.15"], ["172.21.100.63"], ["172.21.1.207"], ["172.200.100.27"]]
+High: PHP 5.4.x < 5.4.42 Multiple Vulnerabilities ["172.105.5.39", ["172.105.5.38"], ["172.105.4.130"], ["172.101.203.9"], ["172.101.11.218"], ["172.101.11.216"], ["172.108.132.9"], ["172.108.132.8"], ["172.108.11.42"]]
+High: PHP 5.4.x < 5.4.17 Buffer Overflow ["172.105.5.39", ["172.105.5.38"], ["172.105.4.130"], ["172.101.203.9"], ["172.101.11.218"], ["172.101.11.216"], ["172.108.132.9"], ["172.108.132.8"], ["172.108.11.42"]]
+High: SNMP Agent Default Community Name (public) ["172.101.19.10", ["172.99.34.12"], ["172.99.32.176"], ["172.99.32.171"], ["172.99.32.161"], ["172.99.32.158"], ["172.99.32.157"], ["172.99.32.153"], ["172.99.32.152"], ["172.99.32.146"], ["172.99.32.145"], ["172.99.32.144"], ["172.99.32.142"], ["172.99.32.139"], ["172.99.32.138"], ["172.99.32.136"], ["172.99.32.135"], ["172.99.32.134"], ["172.99.32.131"], ["172.99.32.130"], ["172.99.32.128"], ["172.99.32.124"], ["172.99.32.121"], ["172.99.32.47"], ["172.99.32.29"], ["172.99.32.26"], ["172.99.32.23"], ["172.99.32.10"], ["172.99.32.9"], ["172.99.32.8"], ["172.99.32.6"], ["172.249.32.126"]]
+High: Elasticsearch Groovy Script RCE ["172.108.36.20"]
+High: Jenkins Accessible without Credentials ["172.99.168.219"]
+High: Kerberos Server Spoofed Packet Amplification DoS (PingPong) ["172.99.168.126", ["172.99.168.102"]]
+High: MS12-020: Vulnerabilities in Remote Desktop Could Allow Remote Code Execution (2671387) (uncredentialed check) ["172.99.168.71", ["172.99.168.70"], ["172.99.168.69"], ["172.99.168.68"], ["172.99.168.7"], ["172.201.19.24"]]
+High: IPMI v2.0 Password Hash Disclosure ["172.99.34.12", ["172.99.32.230"], ["172.99.32.176"], ["172.99.32.171"], ["172.99.32.169"], ["172.99.32.166"], ["172.99.32.164"], ["172.99.32.163"], ["172.99.32.162"], ["172.99.32.161"], ["172.99.32.158"], ["172.99.32.157"], ["172.99.32.153"], ["172.99.32.152"], ["172.99.32.150"], ["172.99.32.146"], ["172.99.32.145"], ["172.99.32.144"], ["172.99.32.142"], ["172.99.32.139"], ["172.99.32.138"], ["172.99.32.136"], ["172.99.32.135"], ["172.99.32.134"], ["172.99.32.131"], ["172.99.32.130"], ["172.99.32.128"], ["172.99.32.124"], ["172.99.32.121"], ["172.99.32.47"], ["172.99.32.38"], ["172.99.32.37"], ["172.99.32.35"], ["172.99.32.34"], ["172.99.32.29"], ["172.99.32.26"], ["172.99.32.23"], ["172.99.32.16"], ["172.99.32.14"], ["172.99.32.13"], ["172.99.32.11"], ["172.99.32.10"], ["172.99.32.9"], ["172.99.32.8"], ["172.99.32.7"], ["172.99.32.6"]]
+High: VNC Server Unauthenticated Access: Screenshot ["172.99.17.25", ["172.99.17.24"], ["172.99.16.58"], ["172.99.16.56"], ["172.99.16.55"], ["172.99.16.54"], ["172.99.16.16"], ["172.99.16.14"], ["172.99.16.13"], ["172.99.16.8"], ["172.99.16.5"]]
+High: VNC Server Unauthenticated Access ["172.99.17.25", ["172.99.17.24"], ["172.99.16.58"], ["172.99.16.56"], ["172.99.16.55"], ["172.99.16.54"], ["172.99.16.16"], ["172.99.16.14"], ["172.99.16.13"], ["172.99.16.8"], ["172.99.16.5"]]
+High: SNMP Agent Default Community Names ["172.249.32.126"]
+High: PHP 5.5.x < 5.5.25 Multiple Vulnerabilities ["172.0.6.240"]
+Medium: SSLv3 Padding Oracle On Downgraded Legacy Encryption Vulnerability (POODLE) 122hosts
+Medium: SSL/TLS EXPORT_RSA <= 512-bit Cipher Suites Supported (FREAK) 61hosts
+Medium: SSL Weak Cipher Suites Supported 65hosts
+Medium: SSL Version 2 and 3 Protocol Detection 141hosts
+Medium: SSL RC4 Cipher Suites Supported 240hosts
+Medium: SSL Certificate Cannot Be Trusted 100hosts
+Medium: TLS Padding Oracle Information Disclosure Vulnerability (TLS POODLE) 9hosts
+Medium: SSL Medium Strength Cipher Suites Supported 25hosts
+Medium: SSL/TLS EXPORT_DHE <= 512-bit Export Cipher Suites Supported (Logjam) 10hosts
+Medium: SSL/TLS Diffie-Hellman Modulus <= 1024 Bits (Logjam) 98hosts
+Medium: SSL Self-Signed Certificate 77hosts
+Medium: SSL / TLS Renegotiation Handshakes MiTM Plaintext Data Injection 13hosts
+Medium: Unencrypted Telnet Server 24hosts
+Medium: SSL Certificate Signed using Weak Hashing Algorithm 19hosts
+Medium: rexecd Service Detection 2hosts
+Medium: NFS Shares World Readable 2hosts
+Medium: IBM WebSphere Application Server 6.1 < Fix Pack 47 Multiple Vulnerabilities 1hosts
+Medium: SSL Certificate Expiry 11hosts
+Medium: Apache Tomcat servlet/JSP container default files 6hosts
+Medium: SSH Protocol Version 1 Session Key Retrieval 11hosts
+Medium: HTTP TRACE / TRACK Methods Allowed 26hosts
+Medium: Citrix NFuse Launch Scripts NFuse_Application Parameter XSS 1hosts
+Medium: Apache 2.4 < 2.4.12 Multiple Vulnerabilities 5hosts
+Medium: NTP monlist Command Enabled 295hosts
+Medium: Transport Layer Security (TLS) Protocol CRIME Vulnerability 4hosts
+Medium: Jetty HttpParser Error Remote Memory Disclosure 1hosts
+Medium: HTTP Proxy POST Request Relaying 1hosts
+Medium: HTTP Proxy Arbitrary Site/Port Relaying 1hosts
+Medium: Apple Mac OS X Find-By-Content .DS_Store Web Directory Listing 1hosts
+Medium: SNMP 'GETBULK' Reflection DDoS 1hosts
+Medium: Web Server Reverse Proxy Detection 1hosts
+Medium: DNS Server Zone Transfer Information Disclosure (AXFR) 7hosts
+Medium: MongoDB Unauthenticated REST API Detection 1hosts
+Medium: Unprotected memcached 6hosts
+Medium: DNS Server Recursive Query Cache Poisoning Weakness 2hosts
+Medium: DNS Server Dynamic Update Record Injection 1hosts
+Medium: DNS Server Cache Snooping Remote Information Disclosure 2hosts
+Medium: SMB Signing Required 9hosts
+Medium: Terminal Services Encryption Level is Medium or Low 9hosts
+Medium: Terminal Services Doesn't Use Network Level Authentication (NLA) Only 9hosts
+Medium: Microsoft Windows Remote Desktop Protocol Server Man-in-the-Middle Weakness 9hosts
+Medium: DNS Server Spoofed Request Amplification DDoS 1hosts
+Medium: Dell iDRAC6 / iDRAC7 Login Page ErrorMsg Parameter XSS 1hosts
+Medium: Network Time Protocol Daemon (ntpd) Information Disclosure 1hosts
+Medium: Web Server Generic Cookie Injection 1hosts
+Medium: Internet Key Exchange (IKE) Aggressive Mode with Pre-Shared Key 4hosts
+Medium: SSL Certificate with Wrong Hostname 2hosts
+Medium: Nonexistent Page (404) Physical Path Disclosure 1hosts
+Low: SSL Anonymous Cipher Suites Supported 11hosts
+Low: SSL Certificate Chain Contains RSA Keys Less Than 2048 bits 54hosts
+Low: SSH Weak MAC Algorithms Enabled 534hosts
+Low: SSH Server CBC Mode Ciphers Enabled 534hosts
+Low: Web Server HTTP Header Internal IP Disclosure 1hosts
+Low: Terminal Services Encryption Level is not FIPS-140 Compliant 9hosts
+Info: Traceroute Information 17544hosts
+Info: Nessus Scan Information 18304hosts
+Info: ICMP Timestamp Request Remote Date Disclosure 17662hosts
+Info: TCP/IP Timestamps Supported 2719hosts
+Info: OS Identification 2712hosts
+Info: HTTP Server Type and Version 998hosts
+Info: Device Type 2699hosts
+Info: Common Platform Enumeration (CPE) 2679hosts
+Info: Service Detection 2686hosts
+Info: Nessus SYN scanner 2879hosts
+Info: HyperText Transfer Protocol (HTTP) Information 1756hosts
+Info: Inconsistent Hostname and IP Address 7749hosts
+Info: Host Fully Qualified Domain Name (FQDN) Resolution 13046hosts
+Info: Apache Banner Linux Distribution Disclosure 35hosts
+Info: SSL Session Resume Supported 75hosts
+Info: SSL Perfect Forward Secrecy Cipher Suites Supported 244hosts
+Info: SSL Cipher Suites Supported 286hosts
+Info: SSL Cipher Block Chaining Cipher Suites Supported 274hosts
+Info: SSL Certificate Information 452hosts
+Info: SSL / TLS Versions Supported 486hosts
+Info: Service Detection (HELP Request) 206hosts
+Info: Patch Report 156hosts
+Info: OpenSSL Detection 416hosts
+Info: HP Integrated Lights-Out (iLO) Detection 39hosts
+Info: TLS Next Protocols Supported 145hosts
+Info: SSL Certificate commonName Mismatch 159hosts
+Info: Unknown Service Detection: Banner Retrieval 16hosts
+Info: SSH Server Type and Version Information 527hosts
+Info: SSH Protocol Versions Supported 457hosts
+Info: SSH Algorithms and Languages Supported 534hosts
+Info: Reverse NAT/Intercepting Proxy Detection 18hosts
+Info: Web Server No 404 Error Code Check 266hosts
+Info: SSL Server Accepts Weak Diffie-Hellman Keys 10hosts
+Info: Telnet Server Detection 24hosts
+Info: SMTP Server Detection 55hosts
+Info: RPC portmapper Service Detection 12hosts
+Info: RPC portmapper (TCP) 10hosts
+Info: Oracle Default SID 2hosts
+Info: Oracle Database tnslsnr Service Remote Version Disclosure 2hosts
+Info: NFS Share Export List 2hosts
+Info: FTP Service AUTH TLS Command Support 2hosts
+Info: FTP Server Detection 12hosts
+Info: Daytime Service Detection 2hosts
+Info: CDE Subprocess Control Service (dtspcd) Detection 2hosts
+Info: Backported Security Patch Detection (SSH) 474hosts
+Info: Service Detection (GET request) 32hosts
+Info: RPC Services Enumeration 12hosts
+Info: Web Server on Extended Support 1hosts
+Info: IBM WebSphere Application Server Detection 1hosts
+Info: SLP Server Detection (TCP) 1hosts
+Info: vsftpd Detection 6hosts
+Info: SSL Certificate Chain Contains Certificates Expiring Soon 24hosts
+Info: Open Port Re-check 34hosts
+Info: OS Identification Failed 146hosts
+Info: Web Server / Application favicon.ico Vendor Fingerprinting 7hosts
+Info: HTTP Methods Allowed (per directory) 133hosts
+Info: Backported Security Patch Detection (WWW) 29hosts
+Info: Apache Tomcat Default Error Page Version Detection 16hosts
+Info: Appweb HTTP Server Version 8hosts
+Info: Network Time Protocol (NTP) Server Detection 349hosts
+Info: Web Server robots.txt Information Disclosure 53hosts
+Info: Web Site Cross-Domain Policy File Detection 25hosts
+Info: SSL Certificate Expiry - Future Expiry 3hosts
+Info: HTTP Reverse Proxy Detection 3hosts
+Info: Apache Traffic Server Version 2hosts
+Info: Additional DNS Hostnames 16hosts
+Info: PHP Version 23hosts
+Info: Elasticsearch Detection 3hosts
+Info: MySQL Server Detection 19hosts
+Info: Jenkins Detection 5hosts
+Info: Kerberos Information Disclosure 3hosts
+Info: Strict Transport Security (STS) Detection 1hosts
+Info: Non-compliant Strict Transport Security (STS) 1hosts
+Info: WebDAV Detection 1hosts
+Info: HTTP Proxy Open Relay Detection 1hosts
+Info: HTTP Proxy CONNECT Request Relaying 1hosts
+Info: UPnP TCP Helper Detection 1hosts
+Info: SNMP Supported Protocols Detection 32hosts
+Info: SNMP Query System Information Disclosure 32hosts
+Info: SNMP Protocol Version Detection 32hosts
+Info: Backported Security Patch Detection (FTP) 1hosts
+Info: Windows Terminal Services Enabled 9hosts
+Info: Terminal Services Use SSL/TLS 9hosts
+Info: DNS Server Version Detection 11hosts
+Info: DNS Server Detection 12hosts
+Info: SSL Compression Methods Supported 4hosts
+Info: UPnP Client Detection 1hosts
+Info: RMI Registry Detection 1hosts
+Info: SMTP Authentication Methods 49hosts
+Info: MongoDB Web Interface Detection 1hosts
+Info: rsync Service Detection 1hosts
+Info: Erlang Port Mapper Daemon Detection 4hosts
+Info: Advanced Message Queuing Protocol Detection 4hosts
+Info: NFS Server Superfluous 8hosts
+Info: memcached Detection 6hosts
+Info: Windows NetBIOS / SMB Remote Host Information Disclosure 5hosts
+Info: SMB Use Host SID to Enumerate Local Users 3hosts
+Info: Samba Server Detection 3hosts
+Info: Microsoft Windows SMB Shares Enumeration 3hosts
+Info: Microsoft Windows SMB Share Permissions Enumeration 3hosts
+Info: Microsoft Windows SMB NativeLanManager Remote System Information Disclosure 10hosts
+Info: Microsoft Windows SMB LsaQueryInformationPolicy Function SID Enumeration 3hosts
+Info: Microsoft Windows SMB Log In Possible 8hosts
+Info: Microsoft Windows SMB LanMan Pipe Server Listing Disclosure 1hosts
+Info: Microsoft Windows SMB : Obtains the Password Policy 3hosts
+Info: Microsoft Windows SMB Service Detection 11hosts
+Info: PPTP Detection 2hosts
+Info: Microsoft Windows NTLMSSP Authentication Request Remote Network Name Disclosure 7hosts
+Info: RDP Screenshot 8hosts
+Info: Nessus Windows Scan Not Performed with Admin Privileges 5hosts
+Info: Microsoft Windows SMB Registry : Nessus Cannot Access the Windows Registry 5hosts
+Info: DCE Services Enumeration 7hosts
+Info: TFTP Daemon Detection 1hosts
+Info: DNS Server hostname.bind Map Hostname Disclosure 1hosts
+Info: SNMP Request Network Interfaces Enumeration 31hosts
+Info: SNMP Query Routing Information Disclosure 29hosts
+Info: IPMI Versions Supported 46hosts
+Info: IPMI Cipher Suites Supported 46hosts
+Info: Ethernet Card Manufacturer Detection 34hosts
+Info: Alert Standard Format / Remote Management and Control Protocol Detection 46hosts
+Info: SNMP Query Running Process List Disclosure 1hosts
+Info: Dell Integrated Remote Access Controller (iDRAC) Detection 1hosts
+Info: VNC Software Detection 11hosts
+Info: VNC Server Unencrypted Communication Detection 11hosts
+Info: VNC Server Security Type Detection 11hosts
+Info: SMTP Service STARTTLS Command Support 1hosts
+Info: Web Server Crafted Request Vendor/Version Information Disclosure 1hosts
+Info: Wireless Access Point Detection 1hosts
+Info: IPSEC Internet Key Exchange (IKE) Version 1 Detection 15hosts
+Info: IPSEC Internet Key Exchange (IKE) Version 2 Detection 5hosts
+Info: MSRPC Service Detection 2hosts
+Info: Hyper-V Virtual Machine Detection 2hosts
+Info: MikroTik RouterOS Detection 8hosts
+Info: Do not scan printers (AppSocket) 1hosts
+
+======== Target ========
+1: 455 172.81.0.0/16 20hosts
+2: 346 172.0.0.0/16 95hosts
+======== End ========
+

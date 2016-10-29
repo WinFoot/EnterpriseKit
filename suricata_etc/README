@@ -1,0 +1,8 @@
+This git Save the Suricate config file
+
+file: /etc/suricate/*
+
+Some rule is edit:
+alert xxx
+#hl alert xxx
+#hl1 alert xxx

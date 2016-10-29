@@ -1,0 +1,159 @@
+#High: 707
+#Mid: 13987
+#Low: 6166
+
+SSL 2.0 deprecated protocol 23
+SSL certificate invalid date 7
+Vulnerable Javascript library 128
+jQuery cross site scripting 33
+DOM-based cross site scripting 3
+nginx SPDY heap buffer overflow 110
+The Heartbleed Bug 4
+SVN repository found 3
+Cross site scripting (verified) 124
+Cross site scripting 44
+HTML Form found in redirect page [high severity] 5
+CRLF injection/HTTP response splitting 42
+Apache Tomcat examples directory vulnerabilities 8
+HTTP parameter pollution 8
+Configuration file disclosure 4
+Apache Tomcat version older than 6.0.36 4
+Apache Tomcat version older than 6.0.35 3
+Weak password 6
+Configuration file source code disclosure 1
+File inclusion 4
+Minify arbitrary file disclosure 2
+Directory traversal 1
+Blind SQL Injection 24
+Unicode transformation issues 68
+Oracle JavaServer Faces multiple vulnerabilities 2
+Git repository found 19
+Server side request forgery 1
+RSA private key 4
+HTTP.sys remote code execution vulnerability 1
+Zabbix SQL injection 1
+Zabbix 1.8.x-2.2.x Local File Inclusion via XXE Attack 1
+Cross site scripting [stored] (verified) 6
+SQL injection (verified) 2
+Flask debug mode 1
+Code execution 10
+SSL weak ciphers 41
+The FREAK attack (export cipher suites supported) 27
+The POODLE attack (SSLv3 supported) 33
+Slow HTTP Denial of Service Attack 781
+CRIME SSL/TLS attack 2
+SSL certificate public key less than 2048 bit 16
+PHP hangs on parsing particular strings as floating point number 19
+Apache httpd remote denial of service 59
+Application error message 2071
+Error message on page 434
+Directory listing 7899
+TLS1/SSLv3 Renegotiation Vulnerability 55
+HTML form without CSRF protection 967
+Host header attack 312
+User credentials are sent in clear text 287
+.htaccess file readable 24
+Password field submitted using GET method 16
+Source code disclosure 211
+PHPinfo page found 16
+PHP allow_url_fopen enabled 6
+PHP open_basedir is not set 6
+Virtual host directory listing 16
+Multiple vulnerabilities fixed in PHP versions 5.5.12 and 5.4.28 24
+PHP preg_replace used on user input 5
+Basic authentication over HTTP 39
+Insecure transition from HTTP to HTTPS in form post 2
+Apache Tomcat sample files 13
+Jenkins dashboard 4
+Apache httpOnly cookie disclosure 3
+Source Code Disclosure 3
+Cross site scripting (content-sniffing) 26
+Cross site scripting [stored] (content-sniffing) 29
+Fantastico fileslist 2
+PHP errors enabled 1
+Apache Proxy HTTP CONNECT method enabled 2
+Possible debug parameter found 1
+Backup files 529
+Apache Tomcat directory host Appbase authentication bypass vulnerability 1
+Apache Tomcat WAR file directory traversal vulnerability 1
+JetBrains .idea project directory 1
+WordPress username enumeration 1
+Apache configured to run as proxy 1
+MongoDB HTTP status interface 1
+Clickjacking: X-Frame-Options header missing 1670
+Cookie without HttpOnly flag set 559
+Cookie without Secure flag set 733
+Possible sensitive directories 767
+Login page password-guessing attack 163
+Documentation file 79
+OPTIONS method is enabled 120
+Possible sensitive files 209
+TRACE method is enabled 77
+Insecure transition from HTTPS to HTTP in form post 1
+Possible virtual host found 257
+Error page path disclosure 76
+File upload 25
+Sensitive page could be cached 33
+Session token in URL 1352
+Apache mod_negotiation filename bruteforcing 2
+Slow response time 39
+ASP.NET version disclosure 2
+Ruby on Rails CookieStore session cookie persistence 1
+Sensitive data not encrypted 1
+Possible internal IP address disclosure 10797
+Password type input with auto-complete enabled 287
+GHDB: Cacti login page 35
+Error page web server version disclosure 66
+GHDB: Possible sensitive directory (mailbox files) 16
+GHDB: PHP error message 48
+Possible server path disclosure (Unix) 3506
+Possible username or password disclosure 543
+Email address found 2938
+GHDB: Possible PHP configuration file (config.php) 19
+Broken links 8962
+Content type is not specified 895
+GHDB: Apache web server documentation 160
+GHDB: Internal Server Error 42
+GHDB: Files uploaded through FTP 144
+GHDB: Possible admin login page 27
+GHDB: Administrative login page 65
+Possible server path disclosure (Windows) 7
+GHDB: Possible temporary file/directory 61
+GHDB: Postscript file 118
+GHDB: Domino file 16
+Web server default welcome page 14
+GHDB: phpinfo() 9
+GHDB: Mp3 file 122
+GHDB: Maillog files 3
+GHDB: Possible sensitive file (MySQL data files) 138
+GHDB: Possible sensitive file (robots.txt) 1
+GHDB: Possible sensitive directory 1
+GHDB: Possible sensitive file (shadow) 249
+GHDB: Possible file lock 11
+GHDB: Possible server upload portal 75
+GHDB: Possible login page 44
+GHDB: AllMyPHP 22
+GHDB: Possible mysql configuration file 18
+GHDB: Java powered web servers with indexing enabled on their config directory 75
+GHDB: Apache Tomcat Error message 1983
+GHDB: Possible sensitive server information 21
+Microsoft IIS version disclosure 5
+GHDB: Typical login page 6
+GHDB: Oracle configuration file 17
+GHDB: WebLogic Server 3
+GHDB: Default phpinfo page 7
+GHDB: Dbase database file 1
+GHDB: Anaconda configuration file 11
+GHDB: robots.txt with Disallow tag 3
+GHDB: robots.txt file 3
+GHDB: Possible sensitive directory (network) 1
+GHDB: CSV Exported mail 1
+GHDB: ICalender possible sensitive file 6
+GHDB: IBM DisplayWrite Document 8
+GHDB: Dell Remote Access Controller 16
+GHDB: Generic SQL error message 29
+GHDB: Possible sensitive files (installer script) 1
+GHDB: Possible sensitive file (install/install.php) 1
+GHDB: phpMyAdmin 40
+GHDB: Possible sensitive SQL file 1
+GHDB: Outlook PST file 1

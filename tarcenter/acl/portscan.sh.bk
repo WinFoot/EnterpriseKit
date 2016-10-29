@@ -1,0 +1,33 @@
+#!/bin/sh
+
+echo 'StartTime: ' `date`
+filename="input.txt"
+num=0
+date=`date "+%Y%m%d"`
+cp $filename ./result/$filename.$date
+while read line
+do
+  num=$(($num+1))
+  echo $num $line
+  nmap -n -sn $line --append-output -oG ./result/nmap.out.log > /dev/null &
+done < $filename
+
+while true
+do
+  ps=`ps -ef | grep -v grep | grep nmap | wc -l`
+  if [ 0 -eq $ps ]
+  then
+    awk '/^[^#]/{print $2}' ./result/nmap.out.log > ./result/ips.txt.$date
+    rm -rf ./result/nmap.out.log
+    echo 'finish..'
+    break
+  else
+    sleep 1
+  fi
+done
+
+masscan -p1-65535 -iL ./result/ips.txt.$date --rate 10000 -oG ./result/masscan.out.log
+awk -F '[ |/]' '/^[^#]/{print $2":"$4}' ./result/masscan.out.log > ./result/ports.txt.$date
+rm -rf ./result/masscan.out.log
+echo ''
+echo 'EndTime: ' `date`
