@@ -1,0 +1,27 @@
+
+Apache Flink standalone mode WebUI RCE
+
+Versions Affected:
+
+	Flink versions from 1.3.0, Only tested standalone mode
+
+Description:
+
+	Start Flink ./bin/start-cluster.sh 
+
+	web frontend at http://ipaddress:8081/#/submit
+
+	Submit new Job is not controlled by authentication
+
+	Uploaded a malicious jar, you can control this server.
+
+	Search in Shodan, https://www.shodan.io/search?query=Flink+Web+Dashboard
+
+	Hundreds of servers have been affected.
+
+	PoC: Java Code > Runtime.getRuntime().exec("/bin/bash -i", null, null);
+
+Mitigation:
+
+	For standalone mode, default disable the WebUI Upload Jobs by setting jobmanager.web.submit.enable to false.
+

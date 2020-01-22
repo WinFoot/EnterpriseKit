@@ -1,4 +1,5 @@
 #!/bin/bash
+# 针对nmap扫描结果日志，进行查询和格式化的脚步
 
 function usage {
 	echo "usage: $1 [-f nmap.grepable] [-i IP] [-p port] [-s service] [-P protocol]"

