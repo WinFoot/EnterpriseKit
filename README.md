@@ -26,17 +26,17 @@
 ### Sys
 
 - **sys/filemon.sh**  系统安全角度使用这个脚本，监控web目录，是否被上传了webshell，并发送邮件及时告知
-- **sys/rpm_changelog.sh ** 系统漏洞补丁检查，检测CVE补丁是否已经生效
-- **sys/gdb_demo.md ** 测试学习GDB的小例子
-- **sys/make_demo.md ** 测试学习Make的小例子
-- **sys/qemu_demo.md ** 测试学习Qemu的小例子
-- **sys/kali_tools.txt ** 整理Kali工具清单
-- **sys/read_elf.c ** 遍历ELF
+- **sys/rpm_changelog.sh** 系统漏洞补丁检查，检测CVE补丁是否已经生效
+- **sys/gdb_demo.md** 测试学习GDB的小例子
+- **sys/make_demo.md** 测试学习Make的小例子
+- **sys/qemu_demo.md** 测试学习Qemu的小例子
+- **sys/kali_tools.txt** 整理Kali工具清单
+- **sys/read_elf.c** 遍历ELF
 
 ### Web
 
-- **web/curl_batch.sh  ** 批量执行curl，检测页面中存在某个特征，输出检测结果
-- **web/python-simple-web.md ** Py建立最简web服务器
-- **web/http-https-proxy.md ** http代理 https反向代理
-- **find_web ** 多进程探活爬取多个C段下的网站信息，统计词频
+- **web/curl_batch.sh** 批量执行curl，检测页面中存在某个特征，输出检测结果
+- **web/python-simple-web.md** Py建立最简web服务器
+- **web/http-https-proxy.md** http代理 https反向代理
+- **find_web** 多进程探活爬取多个C段下的网站信息，统计词频
 - **3rd_audit** 第三方Web组件检查工具
