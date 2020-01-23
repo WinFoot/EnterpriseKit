@@ -1,0 +1,79 @@
+
+Centos 6.8
+
+# 安装 X11
+
+yum groupinstall 'X Window System' -y
+yum groupinstall 'Desktop ' -y
+startx
+netstat -ant
+> 0.0.0.0:6000
+
+# 安装Oracle 11g
+https://www.tecmint.com/oracle-database-11g-release-2-installation-in-linux/
+
+# SQL客户端
+sqlplus / as sysdba
+sqlplus /nolog
+
+# 连接 or 开关
+conn /as sysdba
+startup
+shutdown
+
+# 监听器
+lsnrctl stop
+lsnrctl start
+
+# 修改密码
+select username,password from dba_users;
+alter user system identified by manager;
+
+# 创建交换分区
+dd if=/dev/zero of=/opt/swap bs=8192 count=1024000
+mkswap /opt/swap
+swapon /opt/swap
+vi /etc/fstab
+/opt/swap               swap                    swap    defaults        0 0
+mount -a
+
+# 报错修复
+ORA-01109: database not open
+ALTER DATABASE OPEN
+
+LRM-00109: could not open parameter file '/u01/app/oracle/product/11.2.0/dbhome_2/dbs/initDB11G.ora'
+cd /u01/app/oracle/admin/orcl/pfile
+cp init.ora.1011201745052 /u01/app/oracle/product/11.2.0/dbhome_2/dbs/initDB11G.ora
+
+ORA-29702: error occurred in Cluster Group Service operation
+cd $ORACLE_HOME/rdbms/lib
+make -f ins_rdbms.mk rac_off
+make -f ins_rdbms.mk ioracle
+
+ORA-01102: cannot mount database in EXCLUSIVE mode
+alter system set cluster_database=false scope=spfile;
+shutdown immediate
+startup
+cd /u01/app/oracle/product/11.2.0/dbhome_2/dbs
+fuser -u lkORCL
+fuser -k  lkORCL
+
+ORA-32001: write to SPFILE requested but no SPFILE is in use
+create spfile from pfile;
+shutdown immediate;
+startup
+
+ORA-00439: feature not enabled: Real Application Clusters
+cd $ORACLE_HOME/rdbms/lib
+make -f ins_rdbms.mk rac_on
+make -f ins_rdbms.mk ioracle
+
+The listener supports no services
+在listener.ora里面添加了一行
+SID_LIST_LISTENER =  
+(SID_LIST =  
+  (SID_DESC =  
+  (GLOBAL_DBNAME = orcl)
+  (SID_NAME = orcl)
+  )
+)

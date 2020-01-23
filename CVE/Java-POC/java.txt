@@ -1,0 +1,20 @@
+Struts 2
+远程命令执行漏洞
+
+Commons FileUpload
+远程拒绝服务漏洞
+
+fastjson
+远程命令执行漏洞
+
+Spring Boot
+远程命令执行漏洞
+
+Spring WebFlow
+远程命令执行漏洞
+
+Apache Shiro
+远程命令执行漏洞
+
+Spring Data REST
+远程命令执行漏洞

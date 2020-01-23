@@ -1,0 +1,56 @@
+create or replace and compile java source named RunCmd as
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+public class RunCmd
+{
+    private static void copyStream(InputStream inputStream, OutputStream outStream,String type) throws IOException {
+        byte[] bytes = new byte[1024];
+        int len = 0;
+        System.out.println("========"+type+"========");
+        while ( (len = inputStream.read(bytes)) != -1)
+         {
+            System.out.println(new String(bytes,0,len));
+            outStream.write(bytes,0,len);
+        }
+    }
+    public static void exec(String cmd)
+    {
+     try {
+            Process pc = Runtime.getRuntime().exec(cmd);
+            copyStream(pc.getInputStream(), System.out,"InputStream()");
+            copyStream(pc.getErrorStream(), System.out,"ErrorStream()");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+};
+/
+
+CREATE OR REPLACE PROCEDURE SP_RUNCMD
+(cmd string)
+as language java name 'RunCmd.exec(java.lang.String)';
+/
+
+begin
+Dbms_Java.Grant_Permission('SCOTT', 'java.io.FilePermission', '<<ALL FILE>>', 'read ,write, execute, delete');
+dbms_java.grant_permission('SCOTT','java.lang.RuntimePermission','*','writeFileDescriptor' );
+end;
+/
+
+begin
+Dbms_Java.Grant_Permission('SYSTEM', 'java.io.FilePermission', '<<ALL FILE>>', 'read ,write, execute, delete');
+dbms_java.grant_permission('SYSTEM','java.lang.RuntimePermission','*','writeFileDescriptor' );
+dbms_java.grant_permission( 'SYSTEM', 'SYS:java.io.FilePermission','/bin/touch', 'execute' );
+end;
+/
+
+然后，打开sqlplus
+依次输入
+set serveroutput on;
+call dbms_java.set_output(5000);
+call sp_runcmd('/bin/ls /home');
+call sp_runcmd('/bin/touch /tmp/dd');
+或者是
+exec sp_runcmd('/bin/ls /home');
+exec sp_runcmd('/bin/echo 123 > /tmp/cc');
