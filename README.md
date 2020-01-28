@@ -33,3 +33,8 @@
 - **sys/kali_tools.txt** 整理Kali工具清单
 - **sys/read_elf.c** 遍历ELF
 
+### Web
+
+- **web/curl_batch.sh** 批量执行curl，检测页面中存在某个特征，输出检测结果
+- **web/python-simple-web.md** Py建立最简web服务器
+- **web/http-https-proxy.md** http代理 https反向代理
